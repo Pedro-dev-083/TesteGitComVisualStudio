@@ -1,0 +1,28 @@
+﻿@model MeuProjeto.Models.UsuarioModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Usuário</title>
+</head>
+<body>
+    <h2>Editar Perfil do Usuário</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.Id)
+
+        <div>
+            <label>Nome:</label>
+            @Html.TextBoxFor(model => model.Nome)
+        </div>
+        <div>
+            <label>Email:</label>
+            @Html.TextBoxFor(model => model.Email)
+        </div>
+
+        <div>
+            <input type="submit" value="Salvar" />
+        </div>
+    }
+</body>
+</html>
